@@ -1,0 +1,34 @@
+.about{
+    padding: 60px 20px;
+    text-align: center;
+    background-color: black;
+    color: bisque;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    min-height: 100vh;
+}
+
+.about h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: bisque;
+    letter-spacing: 0.08rem;
+}
+
+.about p{
+    font-size: 1.3rem;
+    max-width: 700px;
+    line-height: 1.6;
+    margin: 0 auto;
+    color: rgba(135 222 195 0.8);
+    transition: color 0.3s ease;
+}
+
+.about p:hover{
+    color: aqua;
+}

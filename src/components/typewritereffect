@@ -1,0 +1,14 @@
+className={styles.heading}>
+                {headingText.split("").map((char, i) => {
+                    const isSpace = char === " ";
+                    return (
+                        <span
+                            key={i}
+                            className={`${styles.animatedLetter} ${isVisible ? styles.visible : ''}`}
+                            style={{ animationDelay: `${i * 0.1}s`, marginRight: isSpace ? '0.25em' : 0 }}
+                        >
+                            {isSpace ? "\u00A0" : char}
+                        </span>
+                    );
+                })}
+                <span className={styles.cursor}>|</span

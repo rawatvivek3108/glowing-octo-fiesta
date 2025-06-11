@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/glowing-octo-fiesta/static/css/main.6ff0261e.css",
+    "main.js": "/glowing-octo-fiesta/static/js/main.0d261e7e.js",
+    "static/js/453.38892ee6.chunk.js": "/glowing-octo-fiesta/static/js/453.38892ee6.chunk.js",
+    "index.html": "/glowing-octo-fiesta/index.html",
+    "main.6ff0261e.css.map": "/glowing-octo-fiesta/static/css/main.6ff0261e.css.map",
+    "main.0d261e7e.js.map": "/glowing-octo-fiesta/static/js/main.0d261e7e.js.map",
+    "453.38892ee6.chunk.js.map": "/glowing-octo-fiesta/static/js/453.38892ee6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ff0261e.css",
+    "static/js/main.0d261e7e.js"
+  ]
+}

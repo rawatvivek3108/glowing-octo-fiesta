@@ -1,23 +1,40 @@
+:root {
+  --home-bg: #000;
+  --home-title: bisque;
+  --home-tagline: rgba(135, 222, 195, 0.8);
+  --home-tagline-hover: #00ffff;
+  --home-padding: 3.75rem 1.25rem; /* 60px 20px */
+  --home-gap: 1.5rem; /* 24px */
+  --home-title-size: 2rem;
+  --home-avatar-size: 11.25rem; /* 180px */
+  --home-btn-bg: rgba(137, 43, 226, 0.512);
+  --home-btn-bg-hover: rgba(95, 158, 160, 0.673);
+  --home-btn-color: #fcfff0;
+  --home-btn-padding: 0.75rem 1.75rem; /* 12px 28px */
+  --home-btn-radius: 0.375rem; /* 6px */
+  --home-btn-gap: 12.5rem; /* 200px */
+  --home-form-width: 37.5rem; /* 600px */
+}
+
+/* Home section container */
 .home {
-    padding: 60px 20px;
+    padding: var(--home-padding);
     text-align: center;
-    background-color: black;
+    background-color: var(--home-bg);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 25px;
-    color: bisque;
+    gap: var(--home-gap);
+    color: var(--home-title);
     font-family: 'Ubuntu', sans-serif;
 }
 
-
-
-/* Keep your letter-by-letter typing effect */
+/* Avatar image */
 .avatar {
-    width: 180px;
-    height: 180px;
+    width: var(--home-avatar-size);
+    height: var(--home-avatar-size);
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
@@ -27,6 +44,7 @@
     transform: scale(1.05);
 }
 
+/* Heading styles */
 .heading {
     font-family: monospace;
     white-space: nowrap;
@@ -57,7 +75,7 @@
 .cursor {
     display: inline-block;
     margin-left: 2px;
-    color: white;
+    color: #fff;
     animation: blink 1s step-start infinite;
 }
 
@@ -67,55 +85,58 @@
     }
 }
 
+/* Tagline styles */
 .tagline {
     font-style: italic;
-    color: rgba(135, 222, 195, 0.8);
+    color: var(--home-tagline);
     font-size: 1.4rem;
-    max-width: 600px;
+    max-width: var(--home-form-width);
     margin: 0 auto 1.5rem auto;
     line-height: 1.5;
     transition: color 0.3s ease;
 }
 
 .tagline:hover {
-    color: aqua;
+    color: var(--home-tagline-hover);
 }
 
-.typed-cursor{
+.typed-cursor {
     font-weight: bold;
     animation: blink 1s infinite;
 }
 
-@keyframes blink{
-    0%, 50%{
+@keyframes blink {
+    0%, 50% {
         opacity: 1;
     }
-    50.01%, 100%{
+    50.01%, 100% {
         opacity: 0;
     }
 }
 
+/* Button container */
 .buttonContainer {
     display: flex;
-    gap: 200px;
+    gap: var(--home-btn-gap);
     justify-content: center;
     flex-wrap: wrap;
 }
 
+/* Resume button */
 .resume-btn {
     display: inline-block;
-    padding: 12px 28px;
-    color: rgba(252, 255, 240);
-    background-color: rgba(137, 43, 226, 0.512);
+    padding: var(--home-btn-padding);
+    color: var(--home-btn-color);
+    background-color: var(--home-btn-bg);
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: var(--home-btn-radius);
     font-weight: bold;
     transition: background-color 0.3s;
     animation: pulse 2s infinite;
 }
 
 .resume-btn:hover {
-    background-color: rgba(95, 158, 160, 0.673);
+    background-color: var(--home-btn-bg-hover);
 }
 
 @keyframes pulse {

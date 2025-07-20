@@ -1,34 +1,57 @@
+:root {
+  --skills-bg: #000;
+  --skills-title: #87dec3;
+  --skills-text: bisque;
+  --skills-badge-bg: rgba(137, 43, 226, 0.6);
+  --skills-badge-shadow: 0 0 10px rgba(137, 43, 226, 0.8);
+  --skills-badge-shadow-hover: 0 0 20px rgba(95, 158, 160, 0.9);
+  --skills-padding: 3.125rem 1.25rem; /* 50px 20px */
+  --skills-gap: 3.125rem; /* 50px */
+  --skills-title-size: 2.5rem;
+  --skills-badge-padding: 1.25rem; /* 20px */
+  --skills-badge-radius: 0.75rem; /* 12px */
+  --skills-badge-width: 6.25rem; /* 100px */
+  --skills-badge-height: 8.125rem; /* 130px */
+  --skills-icon-size: 3.75rem; /* 60px */
+  --skills-span-size: 1.1rem;
+  --skills-span-margin: 0.625rem; /* 10px */
+}
+
+/* Skills section container */
 .skillsSection {
-  background-color: black;
-  color: bisque;
-  padding: 50px 20px;
+  background-color: var(--skills-bg);
+  color: var(--skills-text);
+  padding: var(--skills-padding);
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
   min-height: 50vh;
 }
 
+/* Section title */
 .title {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+  font-size: var(--skills-title-size);
+  margin-bottom: 1.875rem;
   font-weight: bold;
   letter-spacing: 0.1em;
-  color: #87dec3;
+  color: var(--skills-title);
 }
 
+/* Skills container */
 .skillsContainer {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: var(--skills-gap);
   flex-wrap: wrap;
 }
 
+/* Skill badge */
 .skillBadge {
-  background-color: rgba(137, 43, 226, 0.6);
-  padding: 20px;
-  border-radius: 12px;
-  width: 100px;
-  height: 130px;
-  box-shadow: 0 0 10px rgba(137, 43, 226, 0.8);
+  background-color: var(--skills-badge-bg);
+  padding: var(--skills-badge-padding);
+  border-radius: var(--skills-badge-radius);
+  width: var(--skills-badge-width);
+  height: var(--skills-badge-height);
+  box-shadow: var(--skills-badge-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -39,12 +62,13 @@
 
 .skillBadge:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(95, 158, 160, 0.9);
+  box-shadow: var(--skills-badge-shadow-hover);
 }
 
+/* Icon wrapper */
 .iconWrapper {
-  width: 60px;
-  height: 60px;
+  width: var(--skills-icon-size);
+  height: var(--skills-icon-size);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -60,9 +84,9 @@
 
 .skillBadge span {
   font-weight: bold;
-  font-size: 1.1rem;
-  color: white;
-  margin-top: 10px;
+  font-size: var(--skills-span-size);
+  color: #fff;
+  margin-top: var(--skills-span-margin);
 }
 
 .linkWrapper {

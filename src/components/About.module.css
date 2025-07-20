@@ -1,34 +1,49 @@
-.about{
-    padding: 60px 20px;
+:root {
+  --about-bg: #000;
+  --about-title: bisque;
+  --about-text: rgba(135, 222, 195, 0.85);
+  --about-text-hover: #00ffff;
+  --about-padding: 3.75rem 1.25rem; /* 60px 20px */
+  --about-gap: 1.5rem; /* 24px */
+  --about-title-size: 2rem;
+  --about-text-size: 1.3rem;
+  --about-max-width: 43.75rem; /* 700px */
+}
+
+/* About section container */
+.about {
+    padding: var(--about-padding);
     text-align: center;
-    background-color: black;
-    color: bisque;
+    background-color: var(--about-bg);
+    color: var(--about-title);
     font-family: 'Ubuntu', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: var(--about-gap);
     min-height: 100vh;
 }
 
-.about h2{
-    font-size: 2rem;
-    margin-bottom: 20px;
+/* About section title */
+.about h2 {
+    font-size: var(--about-title-size);
+    margin-bottom: 1.25rem;
     font-weight: bold;
-    color: bisque;
+    color: var(--about-title);
     letter-spacing: 0.08rem;
 }
 
-.about p{
-    font-size: 1.3rem;
-    max-width: 700px;
+/* About section paragraph */
+.about p {
+    font-size: var(--about-text-size);
+    max-width: var(--about-max-width);
     line-height: 1.6;
     margin: 0 auto;
-    color: rgba(135 222 195 0.8);
+    color: var(--about-text);
     transition: color 0.3s ease;
 }
 
-.about p:hover{
-    color: aqua;
+.about p:hover {
+    color: var(--about-text-hover);
 }

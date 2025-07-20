@@ -1,11 +1,10 @@
 import styles from './Home.module.css';
 import useFadeInOnScroll from "./hooks/useFadeInOnScroll";
 import 'animate.css';
-import {ReactTyped} from 'react-typed';
+import { ReactTyped } from 'react-typed';
 
 const Home = () => {
     const [ref, isVisible] = useFadeInOnScroll();
-    const headingText = "Hello I am Vivek Rawat.";
 
     // Animate.css class names to use when visible
     const sectionAnimation = isVisible ? 'animate__animated animate__fadeInUp' : '';
@@ -18,12 +17,18 @@ const Home = () => {
             id="home"
             ref={ref}
             className={`fade-in-section ${styles.home} ${sectionAnimation}`}
+            aria-label="Home section"
         >
             <h1 className={styles.heading}>
-                <ReactTyped strings = {["Hello I am Vivek Rawat."]} typeSpeed={70} backSpeed={50} showCursor={true} cursorChar="|" loop={true}/>
+                <ReactTyped
+                    strings={["Hello, I am Vivek Rawat."]}
+                    typeSpeed={70}
+                    backSpeed={50}
+                    showCursor={true}
+                    cursorChar="|"
+                    loop={true}
+                />
             </h1>
-
-           
 
             <p className={`${styles.tagline} ${taglineAnimation}`}>
                 I am passionate about building beautiful web experiences. I have made this website using React.
@@ -31,15 +36,15 @@ const Home = () => {
 
             <img
                 src="vivek_picture.jpg"
-                alt="Vivek Rawat"
+                alt="Portrait of Vivek Rawat, web developer"
                 className={`${styles.avatar} ${avatarAnimation}`}
             />
 
             <div className={`${styles.buttonContainer} ${buttonAnimation}`}>
-                <a href="/VivekRawatResume.pdf" className={styles["resume-btn"]} target="_blank" rel="noreferrer">
+                <a href="/VivekRawatResume.pdf" className={styles["resume-btn"]} target="_blank" rel="noreferrer" aria-label="View Resume PDF in new tab">
                     View Resume
                 </a>
-                <a href="/VivekRawatResume.pdf" className={styles["resume-btn"]} download>
+                <a href="/VivekRawatResume.pdf" className={styles["resume-btn"]} download aria-label="Download Resume PDF">
                     Download Resume
                 </a>
             </div>

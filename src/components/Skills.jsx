@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Skills.module.css';
 import { FaReact, FaJsSquare, FaCss3Alt, FaHtml5 } from 'react-icons/fa';
 
@@ -29,10 +28,10 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className={styles.skillsSection}>
+    <section id="skills" className={styles.skillsSection} aria-label="Skills Overview">
       <h2 className={styles.title}>Skills Overview</h2>
-      <div className={styles.skillsContainer}>
-        {skills.map(({ name, icon: Icon, color, link }, index) => {
+      <ul className={styles.skillsContainer}>
+        {skills.map(({ name, icon: Icon, color, link }) => {
           const content = (
             <div className={styles.skillBadge} title={name}>
               <div className={styles.iconWrapper}>
@@ -42,20 +41,22 @@ const Skills = () => {
             </div>
           );
           return link ? (
-            <a
-              key={index}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.linkWrapper}
-            >
-              {content}
-            </a>
+            <li key={name}>
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.linkWrapper}
+                aria-label={`View ${name} projects on GitHub (opens in new tab)`}
+              >
+                {content}
+              </a>
+            </li>
           ) : (
-            <div key={index}>{content}</div>
+            <li key={name}>{content}</li>
           );
         })}
-      </div>
+      </ul>
     </section>
   );
 };

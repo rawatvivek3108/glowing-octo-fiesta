@@ -1,18 +1,31 @@
-*{
+:root {
+  --color-bg: #000;
+  --color-header-bg: #282c34;
+  --color-link: #61dafb;
+  --color-text: #fff;
+  --font-main: 'Ubuntu', sans-serif;
+}
+
+/* Reset and base styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html, body{
+
+html, body {
   margin: 0;
   height: 100%;
-  background-color: black;
-  font-family: 'Ubuntu', sans-serif;
+  background-color: var(--color-bg);
+  font-family: var(--font-main);
 }
+
+/* App container */
 .App {
   text-align: center;
 }
 
+/* Logo animation */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -24,19 +37,28 @@ html, body{
   }
 }
 
+/* Header styles */
 .App-header {
-  background-color: #282c34;
+  background-color: var(--color-header-bg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(0.625rem + 2vmin);
+  color: var(--color-text);
 }
 
+/* Link styles */
 .App-link {
-  color: #61dafb;
+  color: var(--color-link);
+  outline: none;
+  transition: color 0.2s;
+}
+.App-link:focus, .App-link:hover {
+  color: #fff;
+  background: var(--color-link);
+  border-radius: 2px;
 }
 
 @keyframes App-logo-spin {
